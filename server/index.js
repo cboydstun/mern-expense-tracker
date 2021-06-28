@@ -7,12 +7,13 @@ require("dotenv").config();
 
 //import routes
 const transactions = require("./routes/transactions");
+const transactions2 = require("./routes/transactions");
 
 //initialize express
 const app = express();
 
 //declare server
-const PORT = process.env.PORT || 5002;
+const PORT = process.env.SERVER_PORT || 5002;
 
 //initialize middleware services
 app.use(express.json());
