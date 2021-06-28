@@ -7,7 +7,6 @@ require("dotenv").config();
 
 //import routes
 const transactions = require("./routes/transactions");
-const transactions2 = require("./routes/transactions");
 
 //initialize express
 const app = express();
@@ -25,9 +24,7 @@ mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true, 
     useUnifiedTopology: true, 
     useCreateIndex: true,
-})
-    .then(console.log("Connected to MongoDB"))
-    .catch((err) => {console.log(err);})
+}).then(console.log("Connected to MongoDB")).catch((err) => {console.log(err);})
 
 //initialize routes
 app.use("/api/v1/transactions", transactions);
