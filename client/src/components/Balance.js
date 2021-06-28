@@ -6,6 +6,7 @@ export const Balance = () => {
   const { transactions } = useContext(GlobalContext);
 
   let total = 0;
+  
   transactions.map(transaction => {
     return total += transaction.amount;
   });
