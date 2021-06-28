@@ -60,7 +60,12 @@ export const GlobalProvider = ({ children }) => {
         type: "ADD TRANSACTION",
         payload: res.data.data
       });
-    } catch (error) {}
+    } catch (error) {
+      dispatch({
+        type: "TRANSACTION_ERROR",
+        payload: error.response.data.error
+      });
+    }
   };
 
   return (
