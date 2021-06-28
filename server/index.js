@@ -5,6 +5,9 @@ const cors = require("cors");
 const morgan = require("morgan");
 require("dotenv").config();
 
+//import routes
+const transactions = require("./routes/transactions");
+
 //initialize express
 const app = express();
 
@@ -24,6 +27,9 @@ mongoose.connect(process.env.MONGO_URL, {
 })
     .then(console.log("Connected to MongoDB"))
     .catch((err) => {console.log(err);})
+
+//initialize routes
+app.use("/api/v1/transactions", transactions);
 
 //show server is listening
 app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
