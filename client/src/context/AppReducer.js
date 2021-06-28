@@ -6,14 +6,14 @@ export default function AppReducer(state, action){
         loading: false,
         transactions: action.payload
       };
-    case "DELETE TRANSACTION":
+    case "DELETE_TRANSACTION":
       return {
         ...state,
         transactions: state.transactions.filter(
           transaction => transaction._id !== action.payload
         )
       };
-    case "ADD TRANSACTION":
+    case "ADD_TRANSACTION":
       return {
         ...state,
         transactions: [...state.transactions, action.payload]

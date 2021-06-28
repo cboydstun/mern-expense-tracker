@@ -37,7 +37,7 @@ export const GlobalProvider = ({ children }) => {
     try {
       await axios.delete(`/api/v1/transactions/${id}`);
       dispatch({
-        type: "DELETE TRANSACTION",
+        type: "DELETE_TRANSACTION",
         payload: id
       });
     } catch (error) {
@@ -57,7 +57,7 @@ export const GlobalProvider = ({ children }) => {
     try {
       const res = await axios.post("/api/v1/transactions", transaction, config);
       dispatch({
-        type: "ADD TRANSACTION",
+        type: "ADD_TRANSACTION",
         payload: res.data.data
       });
     } catch (error) {
