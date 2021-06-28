@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from "react";
+import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { numberWithCommas } from "../utils/format";
 
@@ -7,13 +7,13 @@ export const Balance = () => {
 
   let total = 0;
   transactions.map(transaction => {
-    total += transaction.amount;
+    return total += transaction.amount;
   });
 
   return (
-    <Fragment>
+    <div>
       <h4>Your Balance</h4>
       <h1>${numberWithCommas(total)}</h1>
-    </Fragment>
+    </div>
   );
 };

@@ -10,9 +10,9 @@ export const IncomeExpenses = () => {
 
   transactions.map(transaction => {
     if (transaction.amount < 0) {
-      expense += transaction.amount;
+      return expense += transaction.amount;
     } else {
-      income += transaction.amount;
+      return income += transaction.amount;
     }
   });
 
