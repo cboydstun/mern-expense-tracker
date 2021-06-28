@@ -34,7 +34,8 @@
 
 ### Acknowledgements
 
-- Special Thanks Brad Traversy
+#### Special Thanks Brad Traversy
+
 - https://www.traversymedia.com/
 - https://github.com/bradtraversy/vanillawebprojects/tree/master/expense-tracker
 - https://github.com/bradtraversy/expense-tracker-react
