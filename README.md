@@ -30,7 +30,7 @@
    yarn start
    ```
 
-- Remember DOTENV variables in .env.sample and then remove .sample! =)
+4. Remember DOTENV variables in .env.sample and then remove .sample! =)
 
 ### Acknowledgements
 
